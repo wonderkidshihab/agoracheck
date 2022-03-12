@@ -80,6 +80,9 @@ class _AudiencePageState extends State<AudiencePage> {
       } else if (message.text == "PERMISSION_DENIED-${widget.userName}") {
         setState(() {
           _isJoined = false;
+          Future.delayed(Duration(seconds: 1), () {
+            Navigator.pop(context);
+          });
         });
       }
     };

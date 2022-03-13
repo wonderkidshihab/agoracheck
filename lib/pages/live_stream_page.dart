@@ -142,7 +142,7 @@ class _LiveStreamPageState extends State<LiveStreamPage> {
       return;
     }
     await _initAgoraRtcEngine();
-    await _rtcEngine.joinChannel(null, widget.channelName, null, 0);
+    await _rtcEngine.joinChannel(null, widget.channelName, null, 1);
     _addAgoraEventHandlers();
   }
 
